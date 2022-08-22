@@ -63,11 +63,11 @@ Usually, a machine can be booted from several ways, such as hard disk booting, C
 
 1. Switch on the VM by "**Start the Virtual Machine in BIOS Setup Mode (打开电源时进入固件)**".
 
-![./readme_assets/vmware_bios.png]()
+![](./readme_assets/vmware_bios.png)
 
 2. Click into the VM screen, so your mouse and keyboard are focus on the guest system rather than the host.
 3. Press "right-arrow" key to switch to the "Boot" tab. Press "down-arrow" key to select the "CD-ROM Drive". Press "+" key to push the "CD-ROM Drive" up, until it becomes the first entry.
 
-![./readme_assets/vmware_bios.png]()
+![](./readme_assets/vmware_bios_boot_order.png)
 
 4. Press "F10" key to save the configuration. Now the system starts, and a letter "H" is printed.
