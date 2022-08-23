@@ -35,7 +35,7 @@ If you want to further explore, modify and run `main.py` to generate new ISO.
 
 
 
-### 2 - Create a Virtual Machine (VM)
+### 2 - Create a Virtual Machine (VM) and Load the ISO File
 
 During the VM creating process, never select an existing OS (such as Windows, Linux, ...) but always choose "others".
 
@@ -48,8 +48,20 @@ During the VM creating process, never select an existing OS (such as Windows, Li
    - The wizard may give a warning that the OS in this image can not be detected. Just ignore it.
 3. When selecting guest OS and its version, choose "**Others (其他)**" OS and "**Others (其他)**" version.
 4. Input the name and location for the new VM.
-5. For the disk size, 0.01 GB is enough, because our system is too simple and never uses hard disk.
+5. For the disk size, **0.01 GB** is enough, because our system is too simple and never uses hard disk.
 6. Finish.
+
+
+
+###### In VirtualBox:
+
+1. Input the name and location for the new VM, and choose "**Other**" type and "**Other/Unknown**" version. **4MB** for memory is enough.
+2. For the disk size, **4MB** is enough.
+3. Finish.
+4. Open the VM "**Settings (设置)**" window.
+5. Switch to the "**Storage (存储)**" tab on the left. Select the "**Empty (没有盘片)**" optical drive. In the "Attributes", click "**Choose Virtual Optical Disk File... (选择一个虚拟光盘文件...)**" and load the ISO file.
+
+<img src="./readme_assets/virtualbox_load_iso.png" alt="virtualbox_load_iso" style="zoom: 33%;" />
 
 
 
@@ -63,11 +75,24 @@ Usually, a machine can be booted from several ways, such as hard disk booting, C
 
 1. Switch on the VM by "**Start the Virtual Machine in BIOS Setup Mode (打开电源时进入固件)**".
 
-![](./readme_assets/vmware_bios.png)
+<img src="./readme_assets/vmware_bios.png" style="zoom:50%;" />
 
 2. Click into the VM screen, so your mouse and keyboard are focus on the guest system rather than the host.
 3. Press "right-arrow" key to switch to the "Boot" tab. Press "down-arrow" key to select the "CD-ROM Drive". Press "+" key to push the "CD-ROM Drive" up, until it becomes the first entry.
 
-![](./readme_assets/vmware_bios_boot_order.png)
+<img src="./readme_assets/vmware_bios_boot_order.png" style="zoom: 67%;" />
 
 4. Press "F10" key to save the configuration. Now the system starts, and a letter "H" is printed.
+
+
+
+###### In VirtualBox:
+
+1. Open the VM "**Settings (设置)**" window.
+2. Switch to the "**System (系统)**" tab on the left, and the "**Motherboard (主板)**" tab on the top. In the "**Boot Order (启动顺序)**" list, check the "**Optical (光驱)**" item and move it to the top.
+
+<img src="./readme_assets/virtualbox_boot_order.png" alt="virtualbox_boot_order" style="zoom: 33%;" />
+
+3. Start the VM. Now the system starts, and a letter "H" is printed.
+   - VirtualBox may give a warning that a critical error has occurred while running the virtual machine and the machine execution has been stopped. Just choose "**Ignore (忽略)**".
+
